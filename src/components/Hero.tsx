@@ -70,6 +70,23 @@ export default function Hero() {
           </a>
         </motion.div>
 
+        {/* Live URL — visible in print */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
+          className="mt-6 text-xs text-text-muted"
+        >
+          <a
+            href="https://atnorth.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            🔗 {c.liveUrl}
+          </a>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

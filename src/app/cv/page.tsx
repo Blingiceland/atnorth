@@ -215,6 +215,12 @@ export default function CVPage() {
               </a>
             </span>
             <span>🎂 20. {lang === "en" ? "April" : "apríl"} 1981</span>
+            <span>
+              🔗{" "}
+              <a href="https://atnorth.vercel.app" className="text-[#1F5FAF] hover:underline" target="_blank" rel="noopener noreferrer">
+                atnorth.vercel.app
+              </a>
+            </span>
           </div>
         </header>
 
