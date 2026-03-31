@@ -29,64 +29,81 @@ export function useLang() {
   return useContext(LangContext);
 }
 
-// All site text in both languages
 export const t = {
   // Header
   header: {
     en: { name: "Jón Bjarni Steinsson", subtitle: "application for operations director", cv: "CV / RÉSUMÉ" },
-    is: { name: "Jón Bjarni Steinsson", subtitle: "skilar inn umsókn um stöðu rekstrarstjóra", cv: "FERILSKRÁ (CV)" },
+    is: { name: "Jón Bjarni Steinsson", subtitle: "umsókn um stöðu rekstrarstjóra", cv: "FERILSKRÁ (CV)" },
   },
 
   // Hero
   hero: {
     en: {
-      tag: "Cover Letter",
+      tag: "Application",
       tagSub: "— atNorth ICE02 Operations Director",
-      line1: "Tax Lawyer.",
-      line2: "Operator.",
-      line3: "Next challenge.",
-      sub: "I have nearly two decades of experience in one of the most demanding industries in Iceland. I've watched most people fail. I didn't — I needed bigger challenges.",
-      subBold: "That's why I'm here.",
-      cta1: "Why me?",
-      cta2: "Open résumé →",
+      line1: "Operations Leader.",
+      line2: "Legal Background.",
+      line3: "20 Years of Execution.",
+      sub: "Nearly two decades leading high-reliability, 24/7 operations across hospitality, entertainment, and large-scale event production — industries where failure is immediate, visible, and unforgivable.",
+      subBold: "Now ready for critical infrastructure.",
+      cta1: "Why I'm relevant",
+      cta2: "View full CV",
     },
     is: {
-      tag: "Kynningarbréf",
+      tag: "Umsókn",
       tagSub: "— atNorth ICE02 rekstrarstjóri",
-      line1: "Skattalögfræðingur.",
-      line2: "Rekstraraðili.",
-      line3: "Næsta áskorun.",
-      sub: "Ég hef næstum tveggja áratuga reynslu í einum mest krefjandi iðnaði landsins. Ég hef séð flesta fara á hausinn. Mér tókst það ekki, ég þurfti meiri áskoranir.",
-      subBold: "Þess vegna er ég hér.",
-      cta1: "Af hverju ég?",
-      cta2: "Opna ferilskrá →",
+      line1: "Rekstrarfræðingur.",
+      line2: "Lögfræðimenntun.",
+      line3: "20 ára framkvæmd.",
+      sub: "Næstum tveggja áratuga reynsla af rekstri sem krefst 24/7 áreiðanleika — í veitingaþjónustu, skemmtistöðum og stórviðburðum — þar sem mistök eru strax sýnileg og óafturkræf.",
+      subBold: "Tilbúinn í mikilvæga innviðastjórnun.",
+      cta1: "Hvers vegna ég",
+      cta2: "Sjá fulla ferilskrá",
     },
   },
 
-  // Why Me
+  // Core Experience (was WhyMe)
   whyMe: {
     en: {
-      label: "Why me",
-      h1: "I don't come from a data center.",
-      h2: "I come from real operations.",
-      p1: "For nearly two decades I've run bars, venues, and nightlife in Reykjavík — one of those industries where most people go bankrupt within two years. I didn't. I built up, scaled, and learned.",
-      p2: "Dillon Whiskey Bar. Pablo Discobar. Chuck Norris Grill. Over 200 live concerts a year. Operations that demand everything works – people, finances, flow, and execution – every single day.",
+      label: "Operational background",
+      h1: "High-reliability operations.",
+      h2: "Not theory — real execution.",
+      p1: "For nearly 20 years, I've managed multi-unit, continuous operations in one of the most failure-prone industries in Iceland. Every night is a live event. Every failure is public. Every system — staffing, logistics, compliance, finances — must work in real time, without exception.",
+      p2: "Dillon Whiskey Bar. Pablo Discobar. Chuck Norris Grill. 200+ live events per year. Five operational units running simultaneously. Full P&L responsibility across every entity.",
       cards: [
-        { title: "Operations that don't fail", copy: "Payroll, HR, inventory, procurement, marketing, concert scheduling — all running simultaneously. When you run a venue there's zero margin for error. This is 24/7 operations." },
-        { title: "People who come back", copy: "Hiring, training, and retaining staff in the industry with the highest turnover in the country. If you can retain people at a bar — you can retain people anywhere." },
-        { title: "Pressure no textbook teaches", copy: "When 800 people are waiting outside, the band hasn't shown up, and the police are calling — you solve it. Calmly. Systematically. And everyone goes home safe." },
+        {
+          title: "24/7 Operational Discipline",
+          copy: "Payroll, HR, inventory, procurement, vendor management, and live event logistics — all running in parallel. Zero tolerance for system failure. This is continuous operations management, not project work.",
+        },
+        {
+          title: "Team Reliability in High-Turnover Environments",
+          copy: "Recruiting, training, and retaining staff in Iceland's highest-turnover industry. Building teams that perform consistently — night after night, under pressure, without supervision gaps.",
+        },
+        {
+          title: "Crisis and Incident Management",
+          copy: "When capacity hits 800, a performer cancels, and emergency services call in — there is no escalation path. You resolve it. Calmly, methodically, and with full accountability for outcome.",
+        },
       ],
     },
     is: {
-      label: "Af hverju ég",
-      h1: "Ég kem ekki úr gagnaveri.",
-      h2: "Ég kem úr raunverulegum rekstri.",
-      p1: "Í næstum tvo áratugi hef ég rekið veitinga- og skemmtistaði í Reykjavík í einum þeim iðnaði þar sem flestir fara á hausinn innan tveggja ára. Ég gerði það ekki. Ég byggði upp, stækkaði, og lærði.",
-      p2: "Dillon Whiskey Bar. Pablo Discobar. Chuck Norris Grill. Yfir 200 lifandi tónleikar á ári. Rekstur sem krefst þess að allt gangi upp – fólk, fjármál, flæði, og framkvæmd – á hverjum einasta degi.",
+      label: "Rekstrarreynsla",
+      h1: "Rekstur sem krefst áreiðanleika.",
+      h2: "Ekki kenning — raunveruleg framkvæmd.",
+      p1: "Í næstum 20 ár hef ég stýrt samfelldri starfsemi margra eininga í einum þeim iðnaði á Íslandi þar sem mistök eru algengust. Hvert kvöld er lifandi viðburður. Hvert kerfi — mannauður, aðfangakeðja, reglufylgni, fjármál — verður að virka í rauntíma, undantekningarlaust.",
+      p2: "Dillon Whiskey Bar. Pablo Discobar. Chuck Norris Grill. 200+ lifandi viðburðir á ári. Fimm rekstrareiningar samtímis. Full P&L ábyrgð á öllum einingum.",
       cards: [
-        { title: "Rekstur sem mistekst ekki", copy: "Launavinnsla, mannauðsmál, birgðir, innkaup, markaðssetning, tónleikaskipulag — allt keyrandi í einu. Þegar þú rekur skemmtistað er ekkert svigrúm fyrir mistök. Þetta er 24/7 rekstur." },
-        { title: "Fólk sem kemur til baka", copy: "Ráðning, þjálfun, og varðveisla starfsfólks í iðnaði þar sem starfsmannavelta er hæst á landinu. Ef þú getur haldið í fólk í bar — þá getur þú haldið í fólk hvar sem er." },
-        { title: "Þrýstingur sem kenningabækur kenna ekki", copy: "Þegar 800 manns bíða úti, hljómsveitin er ekki mætt, og lögreglan hringir — þá er leyst úr. Rólega. Skipulega. Og allir fara heim öruggir." },
+        {
+          title: "24/7 rekstraragi",
+          copy: "Launavinnsla, mannauðsmál, birgðir, innkaup, birgðastjórnun og viðburðaskipulag — allt keyrir samsíða. Engin mistök leyfð. Þetta er samfelld rekstrarstjórnun, ekki verkefnavinna.",
+        },
+        {
+          title: "Stöðugleiki teyma í krefjandi umhverfi",
+          copy: "Ráðning, þjálfun og varðveisla starfsfólks í iðnaði með hæstu starfsmannaveltu á landinu. Teymi sem standa sig stöðugt — kvöld eftir kvöld, undir álagi, án eftirlitsgata.",
+        },
+        {
+          title: "Kreppustjórnun og úrlausn atvika",
+          copy: "Þegar rýmið fyllist, listamenn falla frá og neyðarþjónustur hringja — þá er enginn framar í keðjunni. Þú leysir málið. Rólega, skipulega, með fulla ábyrgð á útkomuni.",
+        },
       ],
     },
   },
@@ -94,137 +111,159 @@ export const t = {
   // Education
   education: {
     en: {
-      label: "Education",
-      h1: "Not just an operator.",
-      h2: "A law-educated operator.",
-      sub: "Behind the bar manager is a lawyer who wrote his thesis on international tax policy. This is not an ordinary combination of skills — and that's the point.",
+      label: "Education & Legal Background",
+      h1: "Compliance-ready.",
+      h2: "Legally trained operations leader.",
+      sub: "An LLM in international tax law is not a typical operations background — but it means I bring native fluency in regulatory frameworks, contractual structures, compliance requirements, and cross-border legal considerations that most operators learn on the job.",
       degrees: [
-        { degree: "LLM in European and International Tax Law", school: "Lund University, Sweden", year: "2013–2014", thesis: "Thin Cap and Iceland — What can happen in the absence of thin capitalization rules?", note: "Taught under the Business School of Lund University" },
+        { degree: "LLM in European & International Tax Law", school: "Lund University, Sweden", year: "2013–2014", thesis: "Thin Cap and Iceland — What can happen in the absence of thin capitalization rules?", note: "Taught under Lund University School of Economics and Management" },
         { degree: "Master's in Tax Law", school: "Bifröst University, Iceland", year: "2011–2013", thesis: "What are thin capitalization tax schemes and how are they being countered by policy makers.", note: null },
         { degree: "BS in Business Law", school: "Bifröst University, Iceland", year: "2008–2011", thesis: null, note: null },
-        { degree: "Communication Management & Sustainable Development", school: "In progress", year: "Now", thesis: null, note: "Studies directly connected to the future of infrastructure management" },
+        { degree: "Communication Management & Sustainability", school: "In progress", year: "Current", thesis: null, note: "Directly relevant to stakeholder management and ESG operations" },
       ],
       extraLabel: "Additional",
       extra: [
         "All credits except thesis for ML in Law",
-        "Courses in HR management and international relations, Leadership and management",
-        "Digital marketing at Akademías",
-        "Research on tax evasion in tourism (for SA, SAF, Ministry of Finance and Bifröst)",
+        "HR management, international relations, and leadership coursework",
+        "Digital marketing certification — Akademías",
+        "Research on tax evasion in tourism (commissioned by SA, SAF, Ministry of Finance, and Bifröst University)",
       ],
     },
     is: {
-      label: "Menntun",
-      h1: "Ekki bara rekstraraðili.",
-      h2: "Lögfræðimenntaður rekstraraðili.",
-      sub: "Bak við barstjórann er lögfræðingur sem skrifaði lokaritgerð um alþjóðlega skattastefnu. Þetta er ekki venjuleg blanda af hæfni — og það er tilgangurinn.",
+      label: "Menntun og lögfræðigrunnur",
+      h1: "Tilbúinn í reglufylgni.",
+      h2: "Lögfræðimenntaður rekstrarstjóri.",
+      sub: "LLM í alþjóðlegum skattarétti er ekki dæmigerður rekstrargrunnur — en það þýðir að ég hef innfædda þekkingu á regluverkum, samningsskipulagi, reglufylgni, og lagalegum þáttum yfir landamæri sem flestir rekstrarstjórar þurfa að læra á eigin vegum.",
       degrees: [
         { degree: "LLM í evrópskum og alþjóðlegum skattarétti", school: "Háskólinn í Lundi, Svíþjóð", year: "2013–2014", thesis: "Thin Cap and Iceland — What can happen in the absence of thin capitalization rules?", note: "Kennt undir viðskiptafræðideild Lundarháskóla" },
         { degree: "Master í skattarétti", school: "Háskólinn á Bifröst", year: "2011–2013", thesis: "What are thin capitalization tax schemes and how are they being countered by policy makers.", note: null },
         { degree: "BS í viðskiptalögfræði", school: "Háskólinn á Bifröst", year: "2008–2011", thesis: null, note: null },
-        { degree: "Samskiptastjórnun og sjálfbær þróun", school: "Í vinnslu", year: "Núna", thesis: null, note: "Nám sem tengist beint framtíð innviðastjórnunar" },
+        { degree: "Samskiptastjórnun og sjálfbærni", school: "Í vinnslu", year: "Núna", thesis: null, note: "Tengist beint hagaðilastjórnun og ESG rekstri" },
       ],
       extraLabel: "Aukalegt",
       extra: [
         "Allar einingar aðrar en lokaritgerð í ML í lögfræði",
-        "Kúrsar í mannauðsstjórnun og alþjóðasamskiptum, Forysta og stjórnun",
+        "Mannauðsstjórnun, alþjóðasamskipti, forysta og stjórnun",
         "Stafræn markaðssetning í Akademías",
         "Rannsókn á skattsvikum í ferðaþjónustu (unnið fyrir SA, SAF, Fjármálaráðuneytið og Bifröst)",
       ],
     },
   },
 
-  // System Status
-  status: {
+  // Key Capabilities (replaces SystemStatus percentage bars)
+  capabilities: {
     en: {
-      title: "Competency Overview",
-      subtitle: "Honest assessment",
+      title: "Key Capabilities",
+      subtitle: "Directly transferable to data center operations",
       items: [
-        { label: "Operations", value: 92 },
-        { label: "HR Management", value: 88 },
-        { label: "Pressure tolerance", value: 97 },
-        { label: "Legal & compliance", value: 85 },
-        { label: "Tech & AI", value: 90 },
-        { label: "Data center experience", value: 12, lowlight: true },
-        { label: "Commitment", value: 100 },
+        { icon: "⚡", label: "24/7 Operations Leadership", desc: "Nearly 20 years running continuous, no-downtime operations where every system must function in real time." },
+        { icon: "👥", label: "HR & Team Reliability", desc: "Building, training, and retaining high-performing teams in Iceland's most demanding staffing environment." },
+        { icon: "🔒", label: "Crisis & Incident Management", desc: "Direct accountability for resolution when systems fail — no escalation path, no second chances." },
+        { icon: "📊", label: "P&L Ownership", desc: "Full financial responsibility across multiple simultaneous business units. Budget control is not new." },
+        { icon: "⚖️", label: "Legal & Compliance Fluency", desc: "LLM-level understanding of regulation, contracts, cross-border tax structures, and compliance frameworks." },
+        { icon: "🤖", label: "Technology & AI Adoption", desc: "Active use of AI tools for automation, development, and operational efficiency. This application was built as proof." },
       ],
-      note: "Yes, the data center experience — I know. That's why I'm here, not to pretend I know everything, but to bring everything else.",
+      note: "I don't come from a data center. I come from an environment where failure is equally unacceptable — and I've spent 20 years ensuring it doesn't happen.",
     },
     is: {
-      title: "Hæfnisyfirlit",
-      subtitle: "Heiðarlegt mat",
+      title: "Lykilhæfni",
+      subtitle: "Beint yfirfæranleg yfir í gagnaversrekstur",
       items: [
-        { label: "Rekstrarfærni", value: 92 },
-        { label: "Mannauðsstjórnun", value: 88 },
-        { label: "Þrýstingsþol", value: 97 },
-        { label: "Lögfræði & regluverk", value: 85 },
-        { label: "Tækni & gervigreind", value: 90 },
-        { label: "Gagnaversreynsla", value: 12, lowlight: true },
-        { label: "Skuldbinding", value: 100 },
+        { icon: "⚡", label: "24/7 rekstrarstjórnun", desc: "Næstum 20 ára reynsla af samfelldri starfsemi þar sem hvert kerfi verður að virka í rauntíma." },
+        { icon: "👥", label: "Mannauður og teymi", desc: "Uppbygging, þjálfun og varðveisla afkastamikilla teyma í krefjandasta mannauðsumhverfi Íslands." },
+        { icon: "🔒", label: "Kreppustjórnun", desc: "Bein ábyrgð á úrlausn þegar kerfi bila — engin stigvaxandi leið, engin önnur tækifæri." },
+        { icon: "📊", label: "P&L ábyrgð", desc: "Full fjárhagsleg ábyrgð á mörgum rekstrareiningum samtímis. Kostnaðarstjórnun er ekki nýtt." },
+        { icon: "⚖️", label: "Lögfræði og reglufylgni", desc: "LLM-stigs skilningur á regluverkum, samningum, skattaskipulagi yfir landamæri og reglufylgni." },
+        { icon: "🤖", label: "Tækni og gervigreind", desc: "Virk notkun AI tóla til sjálfvirkni, þróunar og rekstrarhagkvæmni. Þessi umsókn var smíðuð sem sönnun." },
       ],
-      note: "Já, gagnaversreynsluna veit ég. Þess vegna er ég hér, ekki til að þykjast vita allt, heldur til að koma með allt hitt.",
+      note: "Ég kem ekki úr gagnaveri. Ég kem úr umhverfi þar sem bilun er jafn óásættanleg — og ég hef eytt 20 árum í að tryggja að hún gerist ekki.",
     },
   },
 
-  // Eclipse / Current Scale
+  // Eclipse / Current Project
   eclipse: {
     en: {
       label: "Current project",
-      h1: "International producers found me.",
-      h2: "And hired me.",
+      h1: "Multi-stakeholder coordination.",
+      h2: "At national scale.",
       linkText: "www.eclipse.is →",
-      linkSub: "Solar eclipse event in Iceland — culture and science festival",
-      p1: "International producers decided to hold the most complex cultural and scientific event in Icelandic history and found me to ensure it went smoothly. In an Icelandic national park.",
-      p2: "Coordination of municipalities, police, rescue teams, artists, suppliers, and media. Hundreds of people on site, multiple stakeholders. No mistakes allowed.",
-      p3: "If I mess something up, everything falls apart – no take two. This is real-world project management at scale, in a sensitive environment, where everything has to work.",
+      linkSub: "Iceland Eclipse — large-scale cultural and scientific event",
+      p1: "International producers commissioned Iceland's most complex combined cultural and scientific event — and selected me to lead on-the-ground operations. The venue: an Icelandic national park.",
+      p2: "Multi-agency coordination across municipalities, law enforcement, search and rescue, artists, vendors, and national media. Hundreds of people on site. Multiple stakeholder groups. Sensitive protected environment.",
+      p3: "If execution fails, it's immediate and irreversible — there is no second take. This is real-world project management at scale, in a high-risk environment, where every dependency must hold.",
       metrics: [
-        { value: "200+", label: "Concerts & events per year" },
-        { value: "5+", label: "Units managed simultaneously" },
+        { value: "200+", label: "Events managed per year" },
+        { value: "5+", label: "Concurrent operational units" },
         { value: "~20", label: "Years of experience" },
-        { value: "24/7", label: "Operations-ready" },
+        { value: "24/7", label: "Operational readiness" },
       ],
     },
     is: {
       label: "Núverandi verkefni",
-      h1: "Erlendir aðilar fundu mig.",
-      h2: "Og fengu mig.",
+      h1: "Samhæfing margra hagaðila.",
+      h2: "Á landsvísu.",
       linkText: "www.eclipse.is →",
-      linkSub: "Sólmyrkvaviðburður á Íslandi — menningar- og vísindaviðburður",
-      p1: "Erlendir framleiðendur ákváðu að halda flóknasta menningar- og vísindaviðburð Íslandssögunnar og fundu mig til að tryggja að hann færi vel fram. Í íslenskum þjóðgarði.",
-      p2: "Samhæfing sveitarfélaga, lögreglu, björgunarsveita, listamanna, birgja og fjölmiðla. Hundruð manna á staðnum, margir hagsmunaaðilar. Engin mistök leyfð.",
-      p3: "Ef ég klúðra einhverju fer allt á hausinn – engin taka tvö. Þetta er raunveruleg framkvæmdastýring á stórum skala, í viðkvæmu umhverfi, þar sem allt verður að ganga upp.",
+      linkSub: "Iceland Eclipse — stór menningar- og vísindaviðburður",
+      p1: "Erlendir framleiðendur komu að flóknasta sameinaða menningar- og vísindaviðburð Íslandssögunnar — og völdu mig til að stjórna framkvæmdum á staðnum. Vettvangurinn: íslenskur þjóðgarður.",
+      p2: "Samhæfing á vettvangi margra stofnana — sveitarfélaga, lögreglu, björgunarsveita, listamanna, birgja og landsfræguðra fjölmiðla. Hundruð manna á staðnum. Margir hópar hagaðila. Viðkvæmt verndarsvæði.",
+      p3: "Ef framkvæmdin mistekst er það strax og óafturkræft — engin taka tvö. Þetta er raunveruleg verkefnastjórnun á stórum skala, í áhættuumhverfi, þar sem hvert háð hlutfall verður að halda.",
       metrics: [
-        { value: "200+", label: "Tónleikar og viðburðir á ári" },
+        { value: "200+", label: "Viðburðir á ári" },
         { value: "5+", label: "Rekstrareiningar samtímis" },
-        { value: "~20", label: "Ára starfsreynsla" },
+        { value: "~20", label: "Ára reynsla" },
         { value: "24/7", label: "Rekstrartilbúinn" },
       ],
     },
   },
 
-  // Strategy
+  // Strategic Value (was Strategy)
   strategy: {
     en: {
-      label: "Strategic perspective",
-      h1: "Tomorrow's data center needs more than",
-      h2: "technical skills.",
-      sub: "atNorth talks about sustainability, culture, and people. It's no coincidence that I'm simultaneously completing a degree in communication management and sustainable development — it makes sense.",
+      label: "Strategic value",
+      h1: "What I bring beyond",
+      h2: "technical operations.",
+      sub: "atNorth emphasizes sustainability, culture, and people alongside infrastructure. My background maps directly to the non-technical dimensions of this role.",
       cards: [
-        { title: "Communication & trust", copy: "Uptime isn't just technical — it's between people. An operations director who understands communication between teams, clients, and stakeholders is more valuable than one who only understands the technology." },
-        { title: "Sustainability as operations", copy: "Sustainability isn't marketing — it's an operational advantage. My studies in sustainable development are directly relevant if atNorth plans to continue leading in renewable energy." },
-        { title: "Regulation & legal framework", copy: "Legal education and expertise in international tax law. I understand regulation, legal frameworks, compliance — and how major decisions come together." },
-        { title: "Financial management at scale", copy: "ISK 20 billion in annual revenue requires financial literacy. I've had P&L responsibility in every single project I've run. Cost management is nothing new." },
+        {
+          title: "Stakeholder Communication",
+          copy: "Uptime isn't only technical — it's relational. An operations director who understands how to communicate across teams, clients, regulators, and community stakeholders creates more resilient operations than one who only understands systems.",
+        },
+        {
+          title: "Sustainability as Operational Strategy",
+          copy: "Currently completing studies in sustainability and communication management. If atNorth's competitive edge is renewable energy and ESG positioning, that needs to be operationally embedded — not just marketed.",
+        },
+        {
+          title: "Regulatory & Compliance Depth",
+          copy: "Legal education with specialization in international tax law. Native understanding of regulatory frameworks, contractual risk, compliance obligations — the kind of knowledge that prevents costly mistakes before they happen.",
+        },
+        {
+          title: "Financial Control at Scale",
+          copy: "ISK 20B+ in managed annual revenue across multiple entities. Full P&L ownership in every operational role. Financial discipline is foundational, not supplementary.",
+        },
       ],
     },
     is: {
-      label: "Stefnumótandi sjónarmið",
-      h1: "Gagnaver framtíðar þarf meira en",
-      h2: "tæknilega hæfni.",
-      sub: "atNorth talar um sjálfbærni, menningu og fólk. Það er ekki tilviljun að ég er á sama tíma að ljúka námi í samskiptastjórnun og sjálfbærri þróun — það er vit í því.",
+      label: "Stefnumótandi gildi",
+      h1: "Hvað ég kem með umfram",
+      h2: "tæknilegan rekstur.",
+      sub: "atNorth leggur áherslu á sjálfbærni, menningu og fólk samhliða innviðum. Bakgrunnur minn varpar ljósi á ótæknilega víddir þessa hlutverks.",
       cards: [
-        { title: "Samskipti og traust", copy: "Uptime er ekki bara tæknilegt — það er milli mannanna. Gagnaversstjóri sem skilur samskipti á milli teyma, viðskiptavina, og hagsmunaaðila er verðmætari en sá sem skilur bara tæknina." },
-        { title: "Sjálfbærni sem rekstur", copy: "Sjálfbærni er ekki markaðssetning — hún er rekstrarlegur kostur. Nám mitt í sjálfbærri þróun kemur beint heim ef atNorth ætlar að halda áfram að vera leiðandi í endurnýjanlegri orku." },
-        { title: "Regluverk og lagaumhverfi", copy: "Lögfræðimenntun og sérþekking á alþjóðlegum skattarétti. Ég skil regluverk, lagaumhverfi, compliance — og hvernig stórar ákvarðanir falla saman." },
-        { title: "Fjármálastjórnun á skala", copy: "20 milljarðar í árstekjur krefst fjármálaþekkingar. P&L ábyrgð hef ég haft í hverju einasta rekstrarverkefni. Kostnaðarstjórnun er ekki nýtt." },
+        {
+          title: "Samskipti við hagaðila",
+          copy: "Uptime er ekki bara tæknilegt — það er samskiptalegt. Rekstrarstjóri sem skilur hvernig á að eiga samskipti á milli teyma, viðskiptavina, eftirlitsaðila og samfélagsaðila byggir öflugri rekstur en sá sem skilur bara kerfin.",
+        },
+        {
+          title: "Sjálfbærni sem rekstrarstefna",
+          copy: "Nú að ljúka námi í sjálfbærni og samskiptastjórnun. Ef samkeppnisforskot atNorth er endurnýjanleg orka og ESG staðsetning, þá þarf það að vera innbyggt í rekstrinum — ekki bara markaðssett.",
+        },
+        {
+          title: "Dýpt í regluverki og reglufylgni",
+          copy: "Lögfræðimenntun með sérþekkingu á alþjóðlegum skattarétti. Innfæddur skilningur á regluverkum, samningsáhættu, reglufylgni — þekking sem kemur í veg fyrir kostnaðarsamar villur áður en þær gerast.",
+        },
+        {
+          title: "Fjármálastjórnun á skala",
+          copy: "20+ milljarðar í stýrðum árstekjum á mörgum einingum. Full P&L ábyrgð í hverju rekstrarhlutverki. Fjárhagslegur agi er grunnur, ekki viðbót.",
+        },
       ],
     },
   },
@@ -232,30 +271,24 @@ export const t = {
   // Final CTA
   cta: {
     en: {
-      h1: "I may not be the obvious candidate.",
-      h2: "But I could be",
-      h2bold: "the best operator.",
+      h1: "Not the conventional candidate.",
+      h2: "But built for",
+      h2bold: "operational leadership.",
       btn1: "Let's talk →",
-      btn2: "Open résumé",
+      btn2: "View full CV",
     },
     is: {
-      h1: "Ég er kannski ekki augljósi umsækjandinn.",
-      h2: "En ég gæti verið",
-      h2bold: "besti rekstraraðilinn.",
+      h1: "Ekki hefðbundni umsækjandinn.",
+      h2: "En byggður fyrir",
+      h2bold: "rekstrarstjórnun.",
       btn1: "Tölum saman →",
-      btn2: "Opna ferilskrá",
+      btn2: "Sjá fulla ferilskrá",
     },
   },
 
   // Footer
   footer: {
-    en: { built: "Designed and built by the applicant. Obviously.", cv: "Résumé", email: "Email" },
-    is: { built: "Hannað og smíðað af umsækjanda. Því auðvitað.", cv: "Ferilskrá", email: "Tölvupóstur" },
-  },
-
-  // Language toggle
-  langToggle: {
-    en: { label: "IS", disclaimer: "" },
-    is: { label: "EN", disclaimer: "" },
+    en: { built: "Application designed and built by the candidate.", cv: "Résumé", email: "Email" },
+    is: { built: "Umsókn hönnuð og smíðuð af umsækjanda.", cv: "Ferilskrá", email: "Tölvupóstur" },
   },
 };

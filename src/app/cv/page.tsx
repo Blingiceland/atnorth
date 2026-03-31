@@ -8,7 +8,7 @@ const cv = {
     backLink: "← Back to cover letter",
     summary: {
       title: "Summary",
-      text: "Experienced operator, entrepreneur, and manager with nearly two decades of experience running hospitality and entertainment venues alongside large-scale event management. Strong organizational skills, HR management expertise, and experience in digital marketing. Educated lawyer with specialization in international tax law.",
+      text: "Operations leader with nearly two decades of experience managing high-reliability, 24/7 operations across hospitality, entertainment, and large-scale event production. Proven track record in multi-unit management, HR leadership, crisis resolution, financial control, and stakeholder coordination. Legally trained (LLM in international tax law) with native understanding of regulatory frameworks and compliance requirements. Currently leading on-the-ground operations for Iceland's largest international cultural event.",
     },
     education: {
       title: "Education",

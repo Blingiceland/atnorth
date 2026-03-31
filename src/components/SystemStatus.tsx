@@ -1,83 +1,64 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import { useLang, t } from "@/lib/i18n";
 
 export default function SystemStatus() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
-  const [animate, setAnimate] = useState(false);
   const { lang } = useLang();
-  const c = t.status[lang];
-
-  useEffect(() => {
-    if (isInView) {
-      const timer = setTimeout(() => setAnimate(true), 300);
-      return () => clearTimeout(timer);
-    }
-  }, [isInView]);
+  const c = t.capabilities[lang];
 
   return (
     <section className="relative py-24 md:py-32 bg-surface-elevated/50" ref={ref}>
-      <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-10">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="p-8 rounded-2xl bg-surface card-glow border border-border"
+          transition={{ duration: 0.5 }}
+          className="text-xs font-semibold text-accent uppercase tracking-[0.15em] mb-4"
         >
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
-              {c.title}
-            </h3>
-            <span className="text-xs text-text-muted font-mono">
-              {c.subtitle}
-            </span>
-          </div>
-
-          <div className="space-y-4">
-            {c.items.map((item, i) => (
-              <div key={item.label} className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-text-secondary">
-                    {item.label}
-                  </span>
-                  <span
-                    className={`text-sm font-semibold font-mono ${
-                      item.lowlight ? "text-warm" : "text-accent"
-                    }`}
-                  >
-                    {animate ? item.value : 0}%
-                  </span>
-                </div>
-                <div className="h-2 bg-surface-elevated rounded-full overflow-hidden">
-                  <motion.div
-                    className={`h-full rounded-full ${
-                      item.lowlight ? "bg-warm" : "bg-accent"
-                    }`}
-                    initial={{ width: 0 }}
-                    animate={animate ? { width: `${item.value}%` } : {}}
-                    transition={{
-                      duration: 1,
-                      delay: i * 0.12,
-                      ease: [0.16, 1, 0.3, 1],
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={animate ? { opacity: 1 } : {}}
-            transition={{ delay: 1.5 }}
-            className="mt-6 pt-5 border-t border-border text-sm text-text-muted leading-relaxed"
-          >
-            {c.note}
-          </motion.p>
+          {c.title}
         </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-text-secondary text-lg leading-relaxed mb-10 max-w-2xl"
+        >
+          {c.subtitle}
+        </motion.p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {c.items.map((item, i) => (
+            <motion.div
+              key={item.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
+              className="p-6 rounded-xl bg-surface card-glow border border-border"
+            >
+              <div className="text-2xl mb-3">{item.icon}</div>
+              <h3 className="font-bold text-sm text-foreground mb-2">
+                {item.label}
+              </h3>
+              <p className="text-text-muted text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-10 text-sm text-text-muted leading-relaxed max-w-3xl border-l-2 border-accent/30 pl-4"
+        >
+          {c.note}
+        </motion.p>
       </div>
     </section>
   );
